@@ -14,8 +14,8 @@ EEBL (Electronic Emergency Brake Light), öndeki bir aracın ani fren yapması d
 [![Esp2Esp Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
 
 ### Laptop2Laptop Uygulama Videosu
-[![Laptop2Laptop Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
-[![Laptop2Laptop Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
+[![Laptop2Laptop Application Video](https://img.youtube.com/vi/ifbe5aF7DuQ/0.jpg)](https://www.youtube.com/watch?v=ifbe5aF7DuQ)
+[![Laptop2Laptop Application Video](https://img.youtube.com/vi/eVpX9cUAlb0/0.jpg)](https://www.youtube.com/watch?v=eVpX9cUAlb0)
 
 ## Acil Fren Olayı Algoritması
 Projede, acil fren olayını tespit etmek için aşağıdaki parametreler kullanılır:
