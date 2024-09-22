@@ -31,15 +31,21 @@ Fren Pedalı Pozisyonu (brake_position): 0-100% aralığında. Fren pedal pozisy
 Bu koşullar sağlandığında, lider araç takip eden araca "Emergency Brake Activated!" mesajını gönderir.
 
 ## Zorluklar ve Potansiyel Çözümler
-1. UDP Üzerinde Veri İletimindeki Zorluklar
-Zorluk: UDP, TCP'ye göre daha hızlı olmasına rağmen, güvenilir bir veri iletim protokolü değildir. Veri paketleri kaybolabilir veya yanlış sırayla gelebilir.
-Çözüm: Proje, veri kaybı olmayan bir yerel ağda çalışmak üzere tasarlandı. Eğer daha güvenli bir iletim gerekiyorsa, TCP gibi daha güvenilir bir protokol kullanılabilir.
-2. Ağ Bağlantısı
-Zorluk: İki farklı cihazın aynı yerel ağda iletişim kurması zor olabilir.
-Çözüm: Bilgisayarların aynı IP aralığında ve UDP ile iletişim kurabilmesi için ağ yapılandırmalarının doğru olduğundan emin olunmalıdır.
-3. Zamanlama ve Gecikme
-Zorluk: Araçlar arasında gecikme ve zamanlama hataları oluşabilir.
-Çözüm: UDP hızlı bir iletişim sağlar, ancak daha sık doğrulama mekanizmaları eklenebilir.
+### 1. UDP Üzerinden Veri İletiminde Güvenilirlik
+#### Zorluk: 
+UDP protokolü kullanıldığı için veri paketlerinin kaybolma veya yanlış sırada gelme olasılığı bulunuyor. Bu, lider ve takipçi araçlar arasında kritik veri kayıplarına neden olabilir.
+#### Çözüm: 
+UDP'nin hız avantajından faydalandık, ancak veri kaybını önlemek için gelecekte TCP protokolü gibi daha güvenilir protokoller tercih edilebilir. Alternatif olarak, kaybolan veri paketlerinin yeniden gönderilmesini sağlayan bir geri bildirim mekanizması eklenebilir.
+### 2. Ağ Bağlantısının Sağlanması
+#### Zorluk:
+İki bilgisayarın aynı yerel ağda iletişim kurması sırasında IP çakışmaları veya ağ yapılandırması sorunlarıyla karşılaşıldı.
+#### Çözüm:
+Aynı IP aralığında olunduğundan emin olmak için ağ yapılandırmaları gözden geçirildi. Ayrıca, UDP iletişimine izin verecek şekilde firewall (güvenlik duvarı) ayarları düzenlendi.
+### 3. Gerçek Zamanlı Veri İletiminde Doğrulama Eksikliği
+#### Zorluk: 
+Lider aracın takipçi araca gönderdiği verilerin doğru ve zamanında alınıp alınmadığından emin olunamadı.
+#### Çözüm:
+Geri bildirim mekanizması ile lider araca takipçinin veriyi aldığını bildiren bir yapı eklendi.
 ## Kullanılan Teknolojiler
 1. C++: Projenin temel dili olarak seçilmiştir.
 2. Winsock2: UDP üzerinden iki bilgisayar arasında veri iletimi yapmak için kullanılır.
