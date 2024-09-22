@@ -45,7 +45,8 @@ Zorluk: Araçlar arasında gecikme ve zamanlama hataları oluşabilir.
 2. Winsock2: UDP üzerinden iki bilgisayar arasında veri iletimi yapmak için kullanılır.
 3. MinGW: Windows üzerinde C/C++ kodlarını derlemek ve çalıştırmak için kullanılan geliştirme ortamı.
 4. ESP32 modülü
-![Esp32](Esp2Esp/Esp32.jpg)
+
+<img src="Esp2Esp/Esp32.jpg" alt="Esp32" width="480" height="600">
    
 ## Laptop2Laptop Projesini Çalıştırma Adımları
 ### 1. MinGW Kurulumu
