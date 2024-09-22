@@ -41,7 +41,7 @@ Zorluk: Araçlar arasında gecikme ve zamanlama hataları oluşabilir.
 1. MinGW Kurulumu
 MinGW (Minimalist GNU for Windows) kullanarak projeyi derlemek için şu adımları izleyin:
 
-<a href="https://sourceforge.net/projects/mingw/" target="_blank">MinGW İndir</a>
+[MinGW İndir](https://sourceforge.net/projects/mingw/)
 
 Kurulum sırasında g++, make, mingw32-base gibi paketlerin yüklendiğinden emin olun.
 
