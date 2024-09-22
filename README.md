@@ -55,15 +55,21 @@ MinGW (Minimalist GNU for Windows) kullanarak projeyi derlemek için şu adımla
 [MinGW İndir](https://sourceforge.net/projects/mingw/)
 
 Kurulum sırasında g++, make, mingw32-base gibi paketlerin yüklendiğinden emin olun.
+### 2. DevC++ IDE Kullanımı
+Bu proje, DevC++ kullanılarak geliştirilmiştir. DevC++, MinGW ile entegre çalışan bir geliştirme ortamıdır. Aşağıdaki adımlarla projeyi DevC++ üzerinde çalıştırabilirsiniz:
 
-### 2. Winsock2 Kütüphanesinin Kullanımı
+1. **DevC++ İndirin ve Kurun**: [DevC++ İndir](https://sourceforge.net/projects/orwelldevcpp/).
+2. Proje dosyalarını DevC++ üzerinden açın.
+3. Projeyi derlemek için MinGW derleyicisini kullanın.
+4. 
+### 3. Winsock2 Kütüphanesinin Kullanımı
 Bu projede UDP ile veri iletimi sağlamak için Winsock2 kütüphanesi kullanılmıştır. Projeyi derlerken, -lws2_32 linker'ını eklemeniz gerekmektedir:
 ```cpp
   g++ leader.cpp -o V2V_leader.exe -lws2_32
   
   g++ follower.cpp -o V2V_follower.exe -lws2_32
 ```
-### 3. Projeyi Derlemek ve Çalıştırmak
+### 4. Projeyi Derlemek ve Çalıştırmak
 Proje dosyalarını terminal veya komut satırı üzerinden derleyebilirsiniz:
 ```cpp
   g++ leader.cpp -o V2V_leader.exe -lws2_32
