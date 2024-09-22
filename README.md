@@ -119,7 +119,7 @@ Lider araç, takipçiden konum bilgilerini alır, iki araç arasındaki mesafeyi
 Eğer acil fren durumu algılanırsa, takipçi araca acil fren mesajı gönderir.
 
 Takipçi Araç:
-Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı aldıktan sonra lider araca "Mesaj başarıyla alındı" bilgisini geri bildirir.
+Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı aldıktan sonra lider araca Esp2Esp'de  "Mesaj başarıyla alındı", Laptop2Laptop'ta "Takipçi geri bildirimi alındı"  bilgisini geri bildirir.
 
 ## Dosya Yapısı
 ### Laptop2Laptop 
