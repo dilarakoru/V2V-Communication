@@ -74,13 +74,21 @@ Takipçi araç, lider aracın acil fren durumunu algılayarak geri bildirimde bu
 ### 1. Arduino IDE Kurulumu
 [Arduino IDE İndir](https://www.arduino.cc/en/software)
 ### 2. Esp32 board manager
-![Esp32 Board Manager](Esp32Esp/preferences.jpg)
-
+Arduino IDE programının "Preferences" sekmesindeki "Additional boards manager URLs" kısmına alttaki linkler eklenir. Sonrasında "Board" olarak kullanılacak Esp modülü seçilir.
 ```cpp
 https://arduino.esp8266.com/stable/package_esp8266com_index.json
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
-### 3.
+![Esp32 Board Manager](Esp2Esp/preferences.jpg)
+
+### 3. UPLOAD
+1. V2V_follower.ino dosyasının içindeki kod birinci ESP modülüne yüklenir.
+2. V2V_leader.ino dosyasının içindeki kod ikinci ESP modülüne yüklenir.
+3. Seri monitörden cihazların durumu takip edilebilir.
+
+### 4. Web Arayüz Bağlantısı
+1. Lider aracı temsil eden arayüz için 192.168.1.103 lokal ip adresine bağlanılarak arayüze erişilebilir. Sliderlar aracılığıyla parametreler değiştirilebilir. "Break" butonu ile parametreler takipçi aracı temsil eden araca gönderilir. Eğer parametreler takipçi cihaza başarıyla gönderilirse ekranda bilgi bildirimi açığa çıkar.
+2. Takipçi aracı temsil eden arayüz için 192.168.1.106 lokal ip adresine bağlanılarak arayüze erişilebilir. Lider araçtan gelen parametreler burada görüntülenir. Koşullar sağlandığı takdirde "EMERGENCY BREAK" butonu "Kırmızı"ya döner. 
 
 ## Mesaj Akışı
 Lider Araç:
