@@ -37,22 +37,22 @@ Zorluk: Araçlar arasında gecikme ve zamanlama hataları oluşabilir.
 1. C++: Projenin temel dili olarak seçilmiştir.
 2. Winsock2: UDP üzerinden iki bilgisayar arasında veri iletimi yapmak için kullanılır.
 3. MinGW: Windows üzerinde C/C++ kodlarını derlemek ve çalıştırmak için kullanılan geliştirme ortamı.
-## Projeyi Çalıştırma Adımları
-1. MinGW Kurulumu
+## Laptop2Laptop Projesini Çalıştırma Adımları
+### 1. MinGW Kurulumu
 MinGW (Minimalist GNU for Windows) kullanarak projeyi derlemek için şu adımları izleyin:
 
 [MinGW İndir](https://sourceforge.net/projects/mingw/)
 
 Kurulum sırasında g++, make, mingw32-base gibi paketlerin yüklendiğinden emin olun.
 
-3. Winsock2 Kütüphanesinin Kullanımı
+### 2. Winsock2 Kütüphanesinin Kullanımı
 Bu projede UDP ile veri iletimi sağlamak için Winsock2 kütüphanesi kullanılmıştır. Projeyi derlerken, -lws2_32 linker'ını eklemeniz gerekmektedir:
 ```cpp
   g++ leader.cpp -o V2V_leader.exe -lws2_32
   
   g++ follower.cpp -o V2V_follower.exe -lws2_32
 ```
-3. Projeyi Derlemek ve Çalıştırmak
+### 3. Projeyi Derlemek ve Çalıştırmak
 Proje dosyalarını terminal veya komut satırı üzerinden derleyebilirsiniz:
 ```cpp
   g++ leader.cpp -o V2V_leader.exe -lws2_32
@@ -63,7 +63,7 @@ Lider bilgisayar: V2V_leader.exe dosyasını çalıştırın.
 
 Takipçi bilgisayar: V2V_follower.exe dosyasını çalıştırın.
 
-4. Araç Parametrelerini Girmek
+### 4. Araç Parametrelerini Girmek
 Lider araçta hız, fren pedal pozisyonu ve yavaşlama bilgilerini girin.
 
 Takipçi araç, lider aracın acil fren durumunu algılayarak geri bildirimde bulunacaktır.
