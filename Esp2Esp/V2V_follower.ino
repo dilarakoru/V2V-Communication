@@ -101,12 +101,13 @@ String htmlPage = R"=====(
               document.getElementById("pozisyon").innerText = data[2];
               document.getElementById("konum").innerText = data[3];
 
-              // Koşula göre butonun rengini değiştirme
               var brakeButton = document.getElementById("brakeButton");
               var pozisyon = parseInt(data[2]);
               var yavaslama = parseInt(data[1]);
+              var hiz = parseInt(data[0]);
+              var konum = parseInt(data[3]);
 
-              if (pozisyon >= 50 && yavaslama >= 5) {
+              if (pozisyon >= 70 && yavaslama >= 8 && hiz >= 70 &&  konum <= 1000) {
                 brakeButton.classList.add("active");
               } else {
                 brakeButton.classList.remove("active");
