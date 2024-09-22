@@ -68,28 +68,30 @@ Bu proje, DevC++ kullanılarak geliştirilmiştir. DevC++, MinGW ile entegre ça
 2. Proje dosyalarını DevC++ üzerinden açın.
 3. Projeyi derlemek için MinGW derleyicisini kullanın.
 
-### 3. Winsock2 Kütüphanesinin Kullanımı
-Bu projede UDP ile veri iletimi sağlamak için Winsock2 kütüphanesi kullanılmıştır. Projeyi derlerken, -lws2_32 linker'ını eklemeniz gerekmektedir:
-```cpp
-  g++ leader.cpp -o V2V_leader.exe -lws2_32
-  
-  g++ follower.cpp -o V2V_follower.exe -lws2_32
-```
-### 4. Projeyi Derlemek ve Çalıştırmak
-Proje dosyalarını terminal veya komut satırı üzerinden derleyebilirsiniz:
-```cpp
-  g++ leader.cpp -o V2V_leader.exe -lws2_32
-   
-  g++ follower.cpp -o V2V_follower.exe -lws2_32
-```
-Lider bilgisayar: V2V_leader.exe dosyasını çalıştırın.
+### 3. Projeyi Derlemek ve Çalıştırmak
+Bu projede UDP ile veri iletimi sağlamak için Winsock2 kütüphanesi tercih edilmiştir. Winsock2 (Windows Sockets API), Windows işletim sistemlerinde ağ tabanlı uygulamalar geliştirmek için kullanılan bir API'dir ve özellikle UDP/TCP gibi düşük seviyeli ağ protokollerini yönetmek için idealdir. Winsock2, socket programlama yaparken geniş bir özellik seti sunar ve Windows işletim sistemi üzerinde yaygın olarak kullanılmaktadır. Projede veri iletimini etkin ve hızlı bir şekilde gerçekleştirmek için bu kütüphane tercih edilmiştir.
 
-Takipçi bilgisayar: V2V_follower.exe dosyasını çalıştırın.
+Projeyi derlerken -lws2_32 linker'ını eklemeniz gerekmektedir. Aşağıdaki adımları takip ederek projeyi derleyebilir ve çalıştırabilirsiniz.
+Projeyi derlemek için terminal veya komut satırı üzerinden aşağıdaki komutları kullanarak kaynak dosyalarınızı (leader.cpp ve follower.cpp) derleyin:
+```cpp
+ g++ leader.cpp -o V2V_leader.exe -lws2_32
 
+ g++ follower.cpp -o V2V_follower.exe -lws2_32
+```
+Derleme işlemi tamamlandıktan sonra programları çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
+
+Öncü Aracı (Leader) Çalıştırma: Lider laptopta terminalde veya komut satırında aşağıdaki komutu çalıştırarak leader programını başlatın:
+```cpp
+ ./V2V_leader.exe
+```
+Takipçi Aracı (Follower) Çalıştırma: Takipçi laptopta bir terminal penceresi açarak follower programını başlatmak için şu komutu çalıştırın:
+```cpp
+ ./V2V_follower.exe
+```
 ### 4. Araç Parametrelerini Girmek
-Lider araçta hız, fren pedal pozisyonu ve yavaşlama bilgilerini girin.
+Lider araçta hız, fren pedal pozisyonu, yavaşlama ve konum bilgilerini girin.
 
-Takipçi araç, lider aracın acil fren durumunu algılayarak geri bildirimde bulunacaktır.
+Takipçi aracın da konum bilgilerini girin, lider araç acil fren durumunu algılayarak geri bildirimde bulunacaktır.
    
 ## Esp2Esp Projesini Çalıştırma Adımları
 ### 1. Arduino IDE Kurulumu
@@ -117,7 +119,7 @@ Lider araç, takipçiden konum bilgilerini alır, iki araç arasındaki mesafeyi
 Eğer acil fren durumu algılanırsa, takipçi araca acil fren mesajı gönderir.
 
 Takipçi Araç:
-Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı aldıktan sonra lider araca "Acil fren mesajı alındı" bilgisini geri bildirir.
+Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı aldıktan sonra lider araca "Mesaj başarıyla alındı" bilgisini geri bildirir.
 
 ## Dosya Yapısı
 ### Laptop2Laptop 
