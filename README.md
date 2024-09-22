@@ -79,5 +79,9 @@ Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı al
 2. follower.cpp: Takipçi aracın acil fren mesajını alıp geri bildirimde bulunmasını sağlar.
 3. Makefile.win: Projeyi derlemek için kullanılan dosya.
 4. .exe dosyaları: Derlenmiş çalıştırılabilir dosyalar.
+
+## Esp2Esp Projesini Çalıştırma Adımları
+### 1. Arduino IDE Kurulumu
+
 ## Sonuç
 Bu proje, lider ve takipçi araçlar arasında EEBL (Electronic Emergency Brake Light) simülasyonunu başarıyla gerçekleştirir. Lider araç ani fren yaptığında, takipçi araç uyarılır ve lider araca geri bildirim sağlar. Bu proje, V2V iletişiminin nasıl çalıştığını ve UDP protokolü ile hızlı veri iletiminin nasıl sağlanacağını gösterir.
