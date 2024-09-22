@@ -87,7 +87,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 3. Seri monitörden cihazların durumu takip edilebilir.
 
 ### 4. Web Arayüz Bağlantısı
-1. Lider aracı temsil eden arayüz için 192.168.1.103 lokal ip adresine bağlanılarak arayüze erişilebilir. Sliderlar aracılığıyla parametreler değiştirilebilir. "Break" butonu ile parametreler takipçi aracı temsil eden araca gönderilir. Eğer parametreler takipçi cihaza başarıyla gönderilirse ekranda bilgi bildirimi açığa çıkar.
+1. Lider aracı temsil eden arayüz için 192.168.1.103 lokal ip adresine bağlanılarak arayüze erişilebilir. Sliderlar aracılığıyla parametreler değiştirilebilir. "Break" butonu ile parametreler takipçi aracı temsil eden cihaza gönderilir. Eğer parametreler takipçi cihaza başarıyla gönderilirse ekranda bilgi bildirimi açığa çıkar.
 2. Takipçi aracı temsil eden arayüz için 192.168.1.106 lokal ip adresine bağlanılarak arayüze erişilebilir. Lider araçtan gelen parametreler burada görüntülenir. Koşullar sağlandığı takdirde "EMERGENCY BREAK" butonu "Kırmızı"ya döner. 
 
 ## Mesaj Akışı
@@ -105,10 +105,8 @@ Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı al
 3. Makefile.win: Projeyi derlemek için kullanılan dosya.
 4. .exe dosyaları: Derlenmiş çalıştırılabilir dosyalar.
 ### Esp2Esp
-1. leader.cpp: Lider aracın acil fren mesajını gönderen kodu içerir.
-2. follower.cpp: Takipçi aracın acil fren mesajını alıp geri bildirimde bulunmasını sağlar.
-3. Makefile.win: Projeyi derlemek için kullanılan dosya.
-4. .exe dosyaları: Derlenmiş çalıştırılabilir dosyalar.
+1. V2V_leader.ino : Lider aracın acil fren mesajını gönderen kodu içerir.
+2. V2V_follower.ino : Takipçi aracın acil fren mesajını alıp geri bildirimde bulunmasını sağlar.
 
 ## Sonuç
 Bu proje, lider ve takipçi araçlar arasında EEBL (Electronic Emergency Brake Light) simülasyonunu başarıyla gerçekleştirir. Lider araç ani fren yaptığında, takipçi araç uyarılır ve lider araca geri bildirim sağlar. Bu proje, V2V iletişiminin nasıl çalıştığını ve UDP protokolü ile hızlı veri iletiminin nasıl sağlanacağını gösterir.
