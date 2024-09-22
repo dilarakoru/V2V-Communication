@@ -13,10 +13,14 @@ EEBL (Electronic Emergency Brake Light), öndeki bir aracın ani fren yapması d
 ## Acil Fren Olayı Algoritması
 Projede, acil fren olayını tespit etmek için aşağıdaki parametreler kullanılır:
 
-Araç Hızı (speed): 0-90 km/h aralığında. Eğer hız 70 km/h'nin üzerindeyse, acil fren durumu olabilir./n
+Araç Hızı (speed): 0-90 km/h aralığında. Eğer hız 70 km/h'nin üzerindeyse, acil fren durumu olabilir.
+
 Yavaşlama Hızı (deceleration): 0-10 m/s² aralığında. Yavaşlama hızı 8 m/s²'den büyükse, acil fren durumu olabilir.
+
 Fren Pedalı Pozisyonu (brake_position): 0-100% aralığında. Fren pedal pozisyonu %70'in üzerinde olmalıdır.
+
 İki Araç Arasındaki Mesafe (distance): Mesafe 1000 metreden küçükse ve diğer koşullar sağlanıyorsa acil fren mesajı gönderilir.
+
 Bu koşullar sağlandığında, lider araç takip eden araca "Emergency Brake Activated!" mesajını gönderir.
 
 ## Zorluklar ve Potansiyel Çözümler
