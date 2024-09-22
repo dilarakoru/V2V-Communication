@@ -61,7 +61,7 @@ Bu proje, DevC++ kullanılarak geliştirilmiştir. DevC++, MinGW ile entegre ça
 1. **DevC++ İndirin ve Kurun**: [DevC++ İndir](https://sourceforge.net/projects/orwelldevcpp/).
 2. Proje dosyalarını DevC++ üzerinden açın.
 3. Projeyi derlemek için MinGW derleyicisini kullanın.
-4. 
+
 ### 3. Winsock2 Kütüphanesinin Kullanımı
 Bu projede UDP ile veri iletimi sağlamak için Winsock2 kütüphanesi kullanılmıştır. Projeyi derlerken, -lws2_32 linker'ını eklemeniz gerekmektedir:
 ```cpp
