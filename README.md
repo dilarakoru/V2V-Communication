@@ -37,6 +37,8 @@ Zorluk: Araçlar arasında gecikme ve zamanlama hataları oluşabilir.
 1. C++: Projenin temel dili olarak seçilmiştir.
 2. Winsock2: UDP üzerinden iki bilgisayar arasında veri iletimi yapmak için kullanılır.
 3. MinGW: Windows üzerinde C/C++ kodlarını derlemek ve çalıştırmak için kullanılan geliştirme ortamı.
+4. ESP32 modülü
+   
 ## Laptop2Laptop Projesini Çalıştırma Adımları
 ### 1. MinGW Kurulumu
 MinGW (Minimalist GNU for Windows) kullanarak projeyi derlemek için şu adımları izleyin:
@@ -67,6 +69,12 @@ Takipçi bilgisayar: V2V_follower.exe dosyasını çalıştırın.
 Lider araçta hız, fren pedal pozisyonu ve yavaşlama bilgilerini girin.
 
 Takipçi araç, lider aracın acil fren durumunu algılayarak geri bildirimde bulunacaktır.
+   
+## Esp2Esp Projesini Çalıştırma Adımları
+### 1. Arduino IDE Kurulumu
+### 2. Esp32 board manager
+### 3.
+
 ## Mesaj Akışı
 Lider Araç:
 Lider araç, takipçiden konum bilgilerini alır, iki araç arasındaki mesafeyi hesaplar ve acil fren koşullarını değerlendirir.
@@ -74,14 +82,18 @@ Eğer acil fren durumu algılanırsa, takipçi araca acil fren mesajı gönderir
 
 Takipçi Araç:
 Takipçi araç, lider araçtan gelen acil fren mesajını alır ve bu mesajı aldıktan sonra lider araca "Acil fren mesajı alındı" bilgisini geri bildirir.
+
 ## Dosya Yapısı
+### Laptop2Laptop 
 1. leader.cpp: Lider aracın acil fren mesajını gönderen kodu içerir.
 2. follower.cpp: Takipçi aracın acil fren mesajını alıp geri bildirimde bulunmasını sağlar.
 3. Makefile.win: Projeyi derlemek için kullanılan dosya.
 4. .exe dosyaları: Derlenmiş çalıştırılabilir dosyalar.
-
-## Esp2Esp Projesini Çalıştırma Adımları
-### 1. Arduino IDE Kurulumu
+### Esp2Esp
+1. leader.cpp: Lider aracın acil fren mesajını gönderen kodu içerir.
+2. follower.cpp: Takipçi aracın acil fren mesajını alıp geri bildirimde bulunmasını sağlar.
+3. Makefile.win: Projeyi derlemek için kullanılan dosya.
+4. .exe dosyaları: Derlenmiş çalıştırılabilir dosyalar.
 
 ## Sonuç
 Bu proje, lider ve takipçi araçlar arasında EEBL (Electronic Emergency Brake Light) simülasyonunu başarıyla gerçekleştirir. Lider araç ani fren yaptığında, takipçi araç uyarılır ve lider araca geri bildirim sağlar. Bu proje, V2V iletişiminin nasıl çalıştığını ve UDP protokolü ile hızlı veri iletiminin nasıl sağlanacağını gösterir.
