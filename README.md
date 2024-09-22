@@ -72,7 +72,12 @@ Takipçi araç, lider aracın acil fren durumunu algılayarak geri bildirimde bu
    
 ## Esp2Esp Projesini Çalıştırma Adımları
 ### 1. Arduino IDE Kurulumu
+[Arduino IDE İndir](https://www.arduino.cc/en/software)
 ### 2. Esp32 board manager
+```cpp
+https://arduino.esp8266.com/stable/package_esp8266com_index.json
+https://dl.espressif.com/dl/package_esp32_index.json
+```
 ### 3.
 
 ## Mesaj Akışı
