@@ -10,8 +10,12 @@ Takipçi araç: Lider aracın acil fren mesajını alır ve lider araca "Acil fr
 EEBL Olayı Nedir?
 EEBL (Electronic Emergency Brake Light), öndeki bir aracın ani fren yapması durumunda, arkasındaki araçlara uyarı gönderen bir güvenlik sistemidir. Bu proje, bu uyarı sistemini V2V iletişimi üzerinden simüle eder. Öndeki aracın hızı, fren pozisyonu, yavaşlama hızı ve iki araç arasındaki mesafe baz alınarak, ani fren durumları takipçi araca iletilir.
 
-
+### Esp2Esp Uygulama Videosu
 [![Esp2Esp Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
+
+### Laptop2Laptop Uygulama Videosu
+[![Laptop2Laptop Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
+[![Laptop2Laptop Application Video](https://img.youtube.com/vi/zpvHljFyYgk/0.jpg)](https://www.youtube.com/watch?v=zpvHljFyYgk)
 
 ## Acil Fren Olayı Algoritması
 Projede, acil fren olayını tespit etmek için aşağıdaki parametreler kullanılır:
