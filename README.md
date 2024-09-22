@@ -87,7 +87,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 3. Seri monitörden cihazların durumu takip edilebilir.
 
 ### 4. Web Arayüz Bağlantısı
-1. Lider aracı temsil eden arayüz için 192.168.1.103 lokal ip adresine bağlanılarak arayüze erişilebilir. Sliderlar aracılığıyla parametreler değiştirilebilir. "Break" butonu ile parametreler takipçi aracı temsil eden cihaza gönderilir. Eğer parametreler takipçi cihaza başarıyla gönderilirse ekranda bilgi bildirimi açığa çıkar.
+1. Lider aracı temsil eden arayüz için 192.168.1.105 lokal ip adresine bağlanılarak arayüze erişilebilir. Sliderlar aracılığıyla parametreler değiştirilebilir. "Break" butonu ile parametreler takipçi aracı temsil eden cihaza gönderilir. Eğer parametreler takipçi cihaza başarıyla gönderilirse ekranda bilgi bildirimi açığa çıkar.
 2. Takipçi aracı temsil eden arayüz için 192.168.1.106 lokal ip adresine bağlanılarak arayüze erişilebilir. Lider araçtan gelen parametreler burada görüntülenir. Koşullar sağlandığı takdirde "EMERGENCY BREAK" butonu "Kırmızı"ya döner. 
 
 ## Mesaj Akışı
